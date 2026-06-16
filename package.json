@@ -1,0 +1,20 @@
+{
+  "name": "anansi-travel-data",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Monthly-refreshed travel data for the Anansi app: visa requirements (passport-index-dataset) and worldwide embassy contacts (OpenStreetMap).",
+  "scripts": {
+    "fetch:visa": "node scripts/fetch-visa.js",
+    "fetch:embassies": "node scripts/fetch-embassies.js",
+    "manifest": "node scripts/build-manifest.js",
+    "all": "node scripts/fetch-visa.js && node scripts/fetch-embassies.js && node scripts/build-manifest.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "country-iso": "^2.0.5",
+    "i18n-iso-countries": "^7.14.0"
+  }
+}
